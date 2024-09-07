@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Ajustar a distância entre cada opção do header*/
+.nav-item {
+    margin-left: 15px;
+}
+
+/*Animação de hover em cada opção do header*/
+.nav-item:hover {
+    transform: scale(1.2);
+    transition: transform 0.2s ease;
+}
+
+@media screen and (max-width:768px) {
+    /*Joga o icone no centro de telas mobile*/
+    .navbar-brand {
+        margin-left: 30%;
+    }
+}
