@@ -1,16 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+
+html {
+    font-size: 62,5%;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Titillium Web", sans-serif;
 }
+
+/*Remover a estilização padrão de links*/
+a, a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+/*ESTILIZAÇÕES DO HEADER*/
 
 /*Ajustar a distância entre cada opção do header*/
 .nav-item {
     margin-left: 15px;
 }
 
-/*Animação de hover em cada opção do header*/
-.nav-item:hover {
+/*Animação de hover scale*/
+.hover-scale:hover {
     transform: scale(1.2);
     transition: transform 0.2s ease;
 }
@@ -19,5 +34,60 @@
     /*Joga o icone no centro de telas mobile*/
     .navbar-brand {
         margin-left: 30%;
+    }
+}
+
+/*ESTILIZAÇÕES DO BANNER*/
+
+/*Container do banner*/
+.banner {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    border-top: 1px solid rgba(153, 153, 153, 0.5);
+    border-bottom: 1px solid rgba(153, 153, 153, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+/*Container das tags*/
+.tag-container {
+    display: flex;
+}
+
+/*Cada uma das três tags*/
+.tag{
+    text-transform: uppercase;
+    margin: 0 0.5rem;
+    padding: 0.2rem 0.5rem;
+    border-right: 0.1rem solid lightsteelblue;
+    border-bottom: 0.1rem solid lightsteelblue;
+    width: 16rem;
+    text-align: center;
+}
+
+/*Botão "Jogue já"*/
+.banner a {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width:768px) {
+    /*Ajusta o tamanho da logo para telas mobile*/
+    .banner img {
+        width: 22rem;
+        height: 9.5rem;
+    }
+
+    /*Organiza a disposição das tags*/
+    .tag-container {
+        flex-direction: column;
+    }
+
+    .tag {
+        margin-top: 0.5rem;
     }
 }
