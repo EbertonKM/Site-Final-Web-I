@@ -18,6 +18,16 @@ a:visited {
     text-decoration: none;
 }
 
+/*Background fosco - Aplicado por meio da classe*/
+.bg-fosco {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    border-top: 0.01rem solid rgba(153, 153, 153, 0.5);
+    border-left: 0.01rem solid rgba(153, 153, 153, 0.5);
+    border-right: 0.01rem solid lightsteelblue;
+    border-bottom: 0.01rem solid lightsteelblue;
+}
+
 /*---IMAGEM DE FUNDO DA PÁGINA - BACKGROUND---*/
 .background {
     position: fixed;
@@ -29,29 +39,16 @@ a:visited {
 /*---HOME BUTTOM---*/
 .home {
     z-index: 1;
-    position: absolute;
+    position: fixed;
     bottom: 0.3rem;
     right: 0.3rem;
 }
 
 .home span {
     color: white;
-    background-color: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(5px);
-    border-top: 0.01rem solid rgba(153, 153, 153, 0.5);
-    border-left: 0.01rem solid rgba(153, 153, 153, 0.5);
-    border-right: 0.01rem solid lightsteelblue;
-    border-bottom: 0.01rem solid lightsteelblue;
 }
 
 /*---ESTILIZAÇÕES DO HEADER---*/
-
-/*Fundo personalizado do header*/
-header {
-    background-color: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(5px);
-    border-bottom: 1px solid rgba(153, 153, 153, 0.5);
-}
 
 /*Ajustar a distância entre cada opção do header*/
 .nav-item {
@@ -85,10 +82,6 @@ header {
 
 /*Container do banner*/
 .banner {
-    background-color: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(5px);
-    border-top: 1px solid rgba(153, 153, 153, 0.5);
-    border-bottom: 1px solid rgba(153, 153, 153, 0.5);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -136,4 +129,35 @@ header {
     .tag {
         margin-top: 0.5rem;
     }
+}
+
+/*---ESTILIZAÇÕES DAS INFORMAÇÕES---*/
+
+.info-container {
+    margin: 1rem 4rem;
+    padding: 1rem;
+}
+
+.informacoes .titulo{
+    display: inline-block;
+    width: 100%;
+}
+
+.informacoes .texto {
+    display: inline-block;
+    width: 66%;
+    margin-top: 1rem;
+}
+
+.informacoes .imagem {
+    display: inline-block;
+    width: 20%;
+    margin-left: 7%;
+}
+
+@media screen and (max-width:768px) {
+    .info-container {
+        margin-left: 0;
+        margin-right: 0;
+    }    
 }
