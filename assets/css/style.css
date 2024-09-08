@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
 
 html {
-    font-size: 62,5%;
+    font-size: 62, 5%;
 }
 
 * {
@@ -12,32 +12,76 @@ html {
 }
 
 /*Remover a estilização padrão de links*/
-a, a:visited {
+a,
+a:visited {
     color: black;
     text-decoration: none;
 }
 
-/*ESTILIZAÇÕES DO HEADER*/
+/*---IMAGEM DE FUNDO DA PÁGINA - BACKGROUND---*/
+.background {
+    position: fixed;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/*---HOME BUTTOM---*/
+.home {
+    z-index: 1;
+    position: absolute;
+    bottom: 0.3rem;
+    right: 0.3rem;
+}
+
+.home span {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    border-top: 0.01rem solid rgba(153, 153, 153, 0.5);
+    border-left: 0.01rem solid rgba(153, 153, 153, 0.5);
+    border-right: 0.01rem solid lightsteelblue;
+    border-bottom: 0.01rem solid lightsteelblue;
+}
+
+/*---ESTILIZAÇÕES DO HEADER---*/
+
+/*Fundo personalizado do header*/
+header {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(153, 153, 153, 0.5);
+}
 
 /*Ajustar a distância entre cada opção do header*/
 .nav-item {
     margin-left: 15px;
+    padding: 0.2rem 0.5rem;
 }
 
-/*Animação de hover scale*/
-.hover-scale:hover {
-    transform: scale(1.2);
-    transition: transform 0.2s ease;
+/*Animação de hover scale. Apenas aplicado em telas grandes*/
+@media screen and (min-width:992px) {
+    .hover-scale:hover {
+        transform: scale(1.2);
+        transition: transform 0.2s ease;
+    }
 }
 
 @media screen and (max-width:768px) {
+    /*Animação de hover scale. Apenas aplicado em pequenas*/
+    .hover-scale:hover {
+        transform: scale(1.07);
+        transition: transform 0.2s ease;
+        background: white;
+    }
+
     /*Joga o icone no centro de telas mobile*/
     .navbar-brand {
         margin-left: 30%;
     }
 }
 
-/*ESTILIZAÇÕES DO BANNER*/
+/*---ESTILIZAÇÕES DO BANNER---*/
 
 /*Container do banner*/
 .banner {
@@ -58,7 +102,7 @@ a, a:visited {
 }
 
 /*Cada uma das três tags*/
-.tag{
+.tag {
     text-transform: uppercase;
     margin: 0 0.5rem;
     padding: 0.2rem 0.5rem;
@@ -71,11 +115,13 @@ a, a:visited {
 /*Botão "Jogue já"*/
 .banner a {
     margin-top: 1rem;
+    padding: 0.2rem 0.5rem;
     font-size: 1.5rem;
     text-transform: uppercase;
 }
 
 @media screen and (max-width:768px) {
+
     /*Ajusta o tamanho da logo para telas mobile*/
     .banner img {
         width: 22rem;
