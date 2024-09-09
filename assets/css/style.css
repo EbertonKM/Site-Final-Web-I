@@ -121,7 +121,6 @@ section {
 }
 
 @media screen and (max-width:768px) {
-
     /*Ajusta o tamanho da logo para telas mobile*/
     #banner img {
         width: 22rem;
