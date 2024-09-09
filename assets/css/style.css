@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
 
 html {
-    font-size: 62, 5%;
+    font-size: 62,5%;
 }
 
 * {
@@ -9,6 +9,8 @@ html {
     padding: 0;
     box-sizing: border-box;
     font-family: "Titillium Web", sans-serif;
+    color: black;
+    scroll-behavior: smooth;
 }
 
 /*Remover a estilização padrão de links*/
@@ -16,6 +18,21 @@ a,
 a:visited {
     color: black;
     text-decoration: none;
+}
+
+/*Background fosco - Aplicado por meio da classe*/
+.bg-fosco {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(15px);
+    border-top: 0.01rem solid rgba(153, 153, 153, 0.5);
+    border-left: 0.01rem solid rgba(153, 153, 153, 0.5);
+    border-right: 0.01rem solid lightsteelblue;
+    border-bottom: 0.01rem solid lightsteelblue;
+}
+
+/*Todas as sections recebem uma margem ao scrollar pelo botão até ela*/
+section {
+    scroll-margin: 1rem;
 }
 
 /*---IMAGEM DE FUNDO DA PÁGINA - BACKGROUND---*/
@@ -29,29 +46,16 @@ a:visited {
 /*---HOME BUTTOM---*/
 .home {
     z-index: 1;
-    position: absolute;
+    position: fixed;
     bottom: 0.3rem;
     right: 0.3rem;
 }
 
 .home span {
     color: white;
-    background-color: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(5px);
-    border-top: 0.01rem solid rgba(153, 153, 153, 0.5);
-    border-left: 0.01rem solid rgba(153, 153, 153, 0.5);
-    border-right: 0.01rem solid lightsteelblue;
-    border-bottom: 0.01rem solid lightsteelblue;
 }
 
 /*---ESTILIZAÇÕES DO HEADER---*/
-
-/*Fundo personalizado do header*/
-header {
-    background-color: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(5px);
-    border-bottom: 1px solid rgba(153, 153, 153, 0.5);
-}
 
 /*Ajustar a distância entre cada opção do header*/
 .nav-item {
@@ -84,11 +88,7 @@ header {
 /*---ESTILIZAÇÕES DO BANNER---*/
 
 /*Container do banner*/
-.banner {
-    background-color: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(5px);
-    border-top: 1px solid rgba(153, 153, 153, 0.5);
-    border-bottom: 1px solid rgba(153, 153, 153, 0.5);
+#banner {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -113,7 +113,7 @@ header {
 }
 
 /*Botão "Jogue já"*/
-.banner a {
+#banner a {
     margin-top: 1rem;
     padding: 0.2rem 0.5rem;
     font-size: 1.5rem;
@@ -121,9 +121,8 @@ header {
 }
 
 @media screen and (max-width:768px) {
-
     /*Ajusta o tamanho da logo para telas mobile*/
-    .banner img {
+    #banner img {
         width: 22rem;
         height: 9.5rem;
     }
@@ -135,5 +134,57 @@ header {
 
     .tag {
         margin-top: 0.5rem;
+    }
+}
+
+/*---ESTILIZAÇÕES DAS INFORMAÇÕES---*/
+
+/*Cada bloco de informação*/
+.info-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1rem 4rem;
+    padding: 1rem;
+}
+
+/*Container com <h2> e <p>*/
+#informacoes .texto {
+    width: 60%;
+}
+
+/*Imagem*/
+#informacoes .imagem {
+    width: 30%;
+    border-radius: 10px;
+    border: 1px solid lightsteelblue;
+}
+
+/*Inverte a ordem dos elementos (bloco 2 e 4)*/
+#informacoes .flex-invertido{
+    flex-direction: row-reverse;
+}
+
+/*Remove as margens em telas médias*/
+@media screen and (max-width:992px) {
+    .info-container {
+        margin-left: 0;
+        margin-right: 0;
+    }    
+}
+
+/*Coloca a imagem embaixo do texto em telas menores*/
+@media screen and (max-width:768px){
+    .info-container {
+        flex-wrap: wrap;
+    }
+
+    #informacoes .texto {
+        width: 90%;
+        text-align: center;
+    }
+
+    #informacoes .imagem {
+        width: 90%;
     }
 }
