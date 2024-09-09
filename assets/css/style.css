@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+
+html {
+    font-size: 62,5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Titillium Web", sans-serif;
+    color: black;
+    scroll-behavior: smooth;
+}
+
+/*Remover a estilização padrão de links*/
+a,
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+/*Background fosco - Aplicado por meio da classe*/
+.bg-fosco {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(15px);
+    border-top: 0.01rem solid rgba(153, 153, 153, 0.5);
+    border-left: 0.01rem solid rgba(153, 153, 153, 0.5);
+    border-right: 0.01rem solid lightsteelblue;
+    border-bottom: 0.01rem solid lightsteelblue;
+}
+
+/*Todas as sections recebem uma margem ao scrollar pelo botão até ela*/
+section {
+    scroll-margin: 1rem;
+}
+
+/*---IMAGEM DE FUNDO DA PÁGINA - BACKGROUND---*/
+.background {
+    position: fixed;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/*---HOME BUTTOM---*/
+.home {
+    z-index: 1;
+    position: fixed;
+    bottom: 0.3rem;
+    right: 0.3rem;
+}
+
+.home span {
+    color: white;
+}
+
+/*---ESTILIZAÇÕES DO HEADER---*/
+
+/*Ajustar a distância entre cada opção do header*/
+.nav-item {
+    margin-left: 15px;
+    padding: 0.2rem 0.5rem;
+}
+
+/*Animação de hover scale. Apenas aplicado em telas grandes*/
+@media screen and (min-width:992px) {
+    .hover-scale:hover {
+        transform: scale(1.2);
+        transition: transform 0.2s ease;
+    }
+}
+
+@media screen and (max-width:768px) {
+    /*Animação de hover scale. Apenas aplicado em pequenas*/
+    .hover-scale:hover {
+        transform: scale(1.07);
+        transition: transform 0.2s ease;
+        background: white;
+    }
+
+    /*Joga o icone no centro de telas mobile*/
+    .navbar-brand {
+        margin-left: 30%;
+    }
+}
+
+/*---ESTILIZAÇÕES DO BANNER---*/
+
+/*Container do banner*/
+#banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+/*Container das tags*/
+.tag-container {
+    display: flex;
+}
+
+/*Cada uma das três tags*/
+.tag {
+    text-transform: uppercase;
+    margin: 0 0.5rem;
+    padding: 0.2rem 0.5rem;
+    border-right: 0.1rem solid lightsteelblue;
+    border-bottom: 0.1rem solid lightsteelblue;
+    width: 16rem;
+    text-align: center;
+}
+
+/*Botão "Jogue já"*/
+#banner a {
+    margin-top: 1rem;
+    padding: 0.2rem 0.5rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width:768px) {
+
+    /*Ajusta o tamanho da logo para telas mobile*/
+    #banner img {
+        width: 22rem;
+        height: 9.5rem;
+    }
+
+    /*Organiza a disposição das tags*/
+    .tag-container {
+        flex-direction: column;
+    }
+
+    .tag {
+        margin-top: 0.5rem;
+    }
+}
+
+/*---ESTILIZAÇÕES DAS INFORMAÇÕES---*/
+
+/*Cada bloco de informação*/
+.info-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1rem 4rem;
+    padding: 1rem;
+}
+
+/*Container com <h2> e <p>*/
+#informacoes .texto {
+    width: 60%;
+}
+
+/*Imagem*/
+#informacoes .imagem {
+    width: 30%;
+    border-radius: 10px;
+    border: 1px solid lightsteelblue;
+}
+
+/*Inverte a ordem dos elementos (bloco 2 e 4)*/
+#informacoes .flex-invertido{
+    flex-direction: row-reverse;
+}
+
+/*Remove as margens em telas médias*/
+@media screen and (max-width:992px) {
+    .info-container {
+        margin-left: 0;
+        margin-right: 0;
+    }    
+}
+
+/*Coloca a imagem embaixo do texto em telas menores*/
+@media screen and (max-width:768px){
+    .info-container {
+        flex-wrap: wrap;
+    }
+
+    #informacoes .texto {
+        width: 90%;
+        text-align: center;
+    }
+
+    #informacoes .imagem {
+        width: 90%;
+    }
+}
