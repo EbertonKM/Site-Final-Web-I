@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
 
 html {
-    font-size: 62, 5%;
+    font-size: 62,5%;
 }
 
 * {
@@ -10,6 +10,7 @@ html {
     box-sizing: border-box;
     font-family: "Titillium Web", sans-serif;
     color: black;
+    scroll-behavior: smooth;
 }
 
 /*Remover a estilização padrão de links*/
@@ -22,11 +23,16 @@ a:visited {
 /*Background fosco - Aplicado por meio da classe*/
 .bg-fosco {
     background-color: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(15px);
     border-top: 0.01rem solid rgba(153, 153, 153, 0.5);
     border-left: 0.01rem solid rgba(153, 153, 153, 0.5);
     border-right: 0.01rem solid lightsteelblue;
     border-bottom: 0.01rem solid lightsteelblue;
+}
+
+/*Todas as sections recebem uma margem ao scrollar pelo botão até ela*/
+section {
+    scroll-margin: 1rem;
 }
 
 /*---IMAGEM DE FUNDO DA PÁGINA - BACKGROUND---*/
