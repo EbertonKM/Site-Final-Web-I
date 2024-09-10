@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
 
 html {
-    font-size: 62,5%;
+    font-size: 62, 5%;
 }
 
 * {
@@ -31,8 +31,20 @@ a:visited {
 }
 
 /*Todas as sections recebem uma margem ao scrollar pelo botão até ela*/
-section {
+section,
+#arti,
+#caca,
+#coma,
+#enge {
     scroll-margin: 1rem;
+}
+
+/*Formatação de todos os títulos de seção*/
+.titulo {
+    width: 100%;
+    text-align: center;
+    padding: 0.2rem;
+    margin-top: 3rem;
 }
 
 /*---IMAGEM DE FUNDO DA PÁGINA - BACKGROUND---*/
@@ -43,12 +55,20 @@ section {
     width: 100%;
     object-fit: cover;
 }
+
 /*---HOME BUTTOM---*/
 .home {
     z-index: 1;
     position: fixed;
     bottom: 0.3rem;
     right: 0.3rem;
+}
+
+/*Eleva um pouco o botão em telas pequenas*/
+@media screen and (max-width:768px) {
+    .home {
+        bottom: 45%;
+    }
 }
 
 .home span {
@@ -61,6 +81,7 @@ section {
 .nav-item {
     margin-left: 15px;
     padding: 0.2rem 0.5rem;
+    font-size: 1.2rem;
 }
 
 /*Animação de hover scale. Apenas aplicado em telas grandes*/
@@ -72,6 +93,7 @@ section {
 }
 
 @media screen and (max-width:768px) {
+
     /*Animação de hover scale. Apenas aplicado em pequenas*/
     .hover-scale:hover {
         transform: scale(1.07);
@@ -121,6 +143,7 @@ section {
 }
 
 @media screen and (max-width:768px) {
+
     /*Ajusta o tamanho da logo para telas mobile*/
     #banner img {
         width: 22rem;
@@ -161,7 +184,7 @@ section {
 }
 
 /*Inverte a ordem dos elementos (bloco 2 e 4)*/
-#informacoes .flex-invertido{
+#informacoes .flex-invertido {
     flex-direction: row-reverse;
 }
 
@@ -170,11 +193,11 @@ section {
     .info-container {
         margin-left: 0;
         margin-right: 0;
-    }    
+    }
 }
 
 /*Coloca a imagem embaixo do texto em telas menores*/
-@media screen and (max-width:768px){
+@media screen and (max-width:768px) {
     .info-container {
         flex-wrap: wrap;
     }
@@ -186,5 +209,117 @@ section {
 
     #informacoes .imagem {
         width: 90%;
+    }
+}
+
+/*---ESTILIZAÇÃO DOS SOBREVIVENTES---*/
+/*CARDS DE SELEÇÃO*/
+
+/*Garante que todos os containers estejam perfeitamente centralizados*/
+#sobreviventes {
+    text-align: center;
+}
+
+/*Div usada para centralizar os cards em cada quarto da tela*/
+.container-seletor {
+    display: inline-block;
+    text-align: center;
+    width: calc(15% - 4px);
+}
+
+/*Cada card de seleção de personagem*/
+.seletor {
+    display: inline-block;
+    text-align: center;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.seletor img {
+    border-bottom: 0.1rem solid rgba(153, 153, 153, 0.5);
+}
+
+/*Nome de cada personagem*/
+#sobreviventes h4 {
+    padding-top: 0.4rem;
+}
+
+/*Modifica a disposição dos cards de 1x4 para 2x2*/
+@media screen and (max-width:768px) {
+    .container-seletor {
+        width: calc(40% - 4px);
+    }
+}
+
+/*DESCRIÇÃO DAS HABILIDADES*/
+
+/*Cada bloco de descrição*/
+.container-habilidade {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 4rem;
+    padding: 1rem;
+}
+
+/*Identificação do personagem*/
+.nome-sobrevivente {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.25), transparent, transparent);
+}
+
+/*Pequeno icone do personagem*/
+.nome-sobrevivente img {
+    height: 4rem;
+}
+
+/*Nome do personagem*/
+.nome-sobrevivente h3 {
+    margin-left: 1rem;
+}
+
+/*Container das descrições*/
+.habilidade {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    width: 25%;
+}
+
+/*Descrição da habilidade*/
+.habilidade p {
+    margin: 0.2rem 2rem;
+}
+
+/*Icone da habilidade*/
+.habilidade img {
+    margin: 0 auto;
+    height: 5rem;
+    width: 5rem;
+    border: 0.1rem solid lightsteelblue;
+}
+
+/*Remove a margem lateral em telas médias*/
+@media screen and (max-width:992px) {
+    .container-habilidade {
+        width: 100%;
+        margin: 1rem 0;
+    }
+}
+
+/*Coloca as descrições em 2x2 em telas mobile*/
+@media screen and (max-width:768px) {
+    .nome-sobrevivente {
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.25), transparent);
+    }
+
+    .habilidade {
+        width: 50%;
+        margin: 1rem 0;
     }
 }
