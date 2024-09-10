@@ -30,8 +30,8 @@
     <header class="bg-fosco">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#banner"><img src="assets/img/logos/ror-logo.png" alt="Logo"
-                        height="60px" width="140px"></a>
+                <a class="navbar-brand" href="#banner"><img src="assets/img/logos/ror-logo.png" alt="Logo" height="60px"
+                        width="140px"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -42,7 +42,7 @@
                             <a class="nav-link active" aria-current="page" href="#informacoes">Informações</a>
                         </li>
                         <li class="nav-item hover-scale">
-                            <a class="nav-link active" href="#">Personagens</a>
+                            <a class="nav-link active" href="#sobreviventes">Sobreviventes</a>
                         </li>
                         <li class="nav-item hover-scale">
                             <a class="nav-link active" href="#">Mapas</a>
@@ -69,7 +69,7 @@
         <section id="informacoes">
             <div class="info-container bg-fosco">
                 <div class="texto">
-                    <h2>Sobreviva em um planeta alienígena</h2>
+                    <h3>Sobreviva em um planeta alienígena</h3>
                     <p>Mais de 12 locais feitos à mão, todos lotados de monstros desafiadores e chefes enormes
                         que se opõem à sua existência. Lute até o chefe final e escape ou continue seu jogo
                         infinitamente e
@@ -82,7 +82,7 @@
             </div>
             <div class="info-container flex-invertido bg-fosco">
                 <div class="texto">
-                    <h2>Descubra novos itens poderosos</h2>
+                    <h3>Descubra novos itens poderosos</h3>
                     <p>Mais de 110 itens mantêm cada partida atualizada e cheia de novos desafios. Quanto
                         mais
                         itens você coletar, maiores e mais surpreendentes as combinações dos efeitos podem ser. Quanto
@@ -94,7 +94,7 @@
             </div>
             <div class="info-container bg-fosco">
                 <div class="texto">
-                    <h2>Libere novos jeitos de jogar</h2>
+                    <h3>Libere novos jeitos de jogar</h3>
                     <p>Libere uma tripulação de sobreviventes jogáveis, cada um com estilo de combate
                         único e
                         diferentes habilidades para dominar. Conheça os mistérios dos Artefatos e ative modificações de
@@ -105,13 +105,156 @@
             </div>
             <div class="info-container flex-invertido bg-fosco">
                 <div class="texto">
-                    <h2>Jogue Individual ou cooperativamente</h2>
+                    <h3>Jogue Individual ou cooperativamente</h3>
                     <p>Aventure-se por conta própria ou com até três amigos no modo cooperativo online ou
                         dispute o desafio rotativo das Provações Prismáticas. Sobreviventes novinhos em folha, como a
                         Artífice a Caçadora o Comando e é claro, o Engenheiro.
                     </p>
                 </div>
                 <img src="assets/img/backgrounds/solo-coop.jpg" alt="imagem-ilustração" class="imagem">
+            </div>
+        </section>
+
+        <!--Sobreviventes usando display block-->
+        <section id="sobreviventes">
+            <h2 class="titulo bg-fosco">Sobreviventes</h2>
+            <!--Seleção dos sobreviventes-->
+            <div class="container-seletor">
+                <a href="#arti">
+                    <div class="seletor hover-scale bg-fosco">
+                        <img src="assets/img/sobreviventes/arti.webp" alt="Artífice">
+                        <h4>Artífice</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="container-seletor">
+                <a href="#caca">
+                    <div class="seletor hover-scale bg-fosco">
+                        <img src="assets/img/sobreviventes/caca.webp" alt="Caçadora">
+                        <h4>Caçadora</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="container-seletor">
+                <a href="#coma">
+                    <div class="seletor hover-scale bg-fosco">
+                        <img src="assets/img/sobreviventes/coma.webp" alt="Comando">
+                        <h4>Comando</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="container-seletor">
+                <a href="#enge">  
+                    <div class="seletor hover-scale bg-fosco">
+                        <img src="assets/img/sobreviventes/enge.webp" alt="Engenheiro">
+                        <h4>Engenheiro</h4>
+                    </div>
+                </a>
+            </div>
+            <!--Habilidades dos sobreviventes (Display flex)-->
+            <div class="container-habilidade bg-fosco" id="arti">
+                <div class="nome-sobrevivente">
+                    <img src="assets/img/sobreviventes/arti.webp">
+                    <h3>Artífice</h3>
+                </div>
+                <div class="habilidade">
+                    <h4>Raio de Plasma</h4>
+                    <p>Dispare um raio que causa dano e explode em uma pequena área</p>
+                    <img src="assets/img/icones-habilidade/arti-pri.webp">
+                </div>
+                <div class="habilidade">
+                    <h4>Nanomomba Carregada</h4>
+                    <p>Carregue uma nanobomba que explode causando dano e atordoando inimigos</p>
+                    <img src="assets/img/icones-habilidade/arti-sec.webp">
+                </div>
+                <div class="habilidade">
+                    <h4>Congelar Abrupto</h4>
+                    <p>Crie uma barreira que causa dano e congela inimigos podendo executados</p>
+                    <img src="assets/img/icones-habilidade/arti-ut.webp">
+                </div>
+                <div class="habilidade">
+                    <h4>Surto de Íon</h4>
+                    <p>Irrompa no céu causando dano e atordoando inimigos no lançamento</p>
+                    <img src="assets/img/icones-habilidade/arti-esp.webp">
+                </div>
+            </div>
+            <div class="container-habilidade bg-fosco" id="caca">
+                <div class="nome-sobrevivente">
+                    <img src="assets/img/sobreviventes/caca.webp">
+                    <h3>Caçadora</h3>
+                </div>
+                <div class="habilidade">
+                    <h4>Disparo</h4>
+                    <p>Dispare rapidamente uma flecha teleguiada enquanto corre</p>
+                    <img src="assets/img/icones-habilidade/caca-pri.webp">
+                </div>
+                <div class="habilidade">
+                    <h4>Alabarda de Laser</h4>
+                    <p>Lance uma alabarda teleguiada que golpeia até 6 inimigos causando dano</p>
+                    <img src="assets/img/icones-habilidade/caca-sec.webp">
+                </div>
+                <div class="habilidade">
+                    <h4>Translocação</h4>
+                    <p>Desapareça e teleporte para a frente</p>
+                    <img src="assets/img/icones-habilidade/caca-ut.webp">
+                </div>
+                <div class="habilidade">
+                    <h4>Balista</h4>
+                    <p>Teleporta para o céu. Lança até 3 raios de energia causando dano</p>
+                    <img src="assets/img/icones-habilidade/caca-esp.webp">
+                </div>
+            </div>
+            <div class="container-habilidade bg-fosco" id="coma">
+                <div class="nome-sobrevivente">
+                    <img src="assets/img/sobreviventes/coma.webp">
+                    <h3>Comando</h3>
+                </div>
+                <div class="habilidade">
+                    <h4>Tiro Duplo</h4>
+                    <p>Atire rapidamente em um inimigo</p>
+                    <img src="assets/img/icones-habilidade/coma-pri.webp">
+                </div>
+                <div class="habilidade">
+                    <h4>Projétil Fásico</h4>
+                    <p>Dispare um projétil perfurante que causa dano aumentando cada vez que atravessar um inimigo</p>
+                    <img src="assets/img/icones-habilidade/coma-sec.webp">
+                </div>
+                <div class="habilidade">
+                    <h4>Esquiva Tática</h4>
+                    <p>Rola uma pequena distância</p>
+                    <img src="assets/img/icones-habilidade/coma-ut.webp">
+                </div>
+                <div class="habilidade">
+                    <h4>Fogo de Supressão</h4>
+                    <p>Dispare repetidamente causando dano e atordoando inimigos atingidos</p>
+                    <img src="assets/img/icones-habilidade/coma-esp.webp">
+                </div>
+            </div>
+            <div class="container-habilidade bg-fosco" id="enge">
+                <div class="nome-sobrevivente">
+                    <img src="assets/img/sobreviventes/enge.webp">
+                    <h3>Engenheiro</h3>
+                </div>
+                <div class="habilidade">
+                    <h4>Granadas Saltitantes</h4>
+                    <p>Carregue até 8 granadas que causam dano explosivo</p>
+                    <img src="assets/img/icones-habilidade/enge-pri.webp">
+                </div>
+                <div class="habilidade">
+                    <h4>Minas de Aranha</h4>
+                    <p>Posicione uma mina autônoma que causa dano a inimigos próximos</p>
+                    <img src="assets/img/icones-habilidade/enge-sec.webp">
+                </div>
+                <div class="habilidade">
+                    <h4>Arpões Térmicos</h4>
+                    <p>Entre no modo de marcação de alvos para larnçar mísseis teleguiados por calor</p>
+                    <img src="assets/img/icones-habilidade/enge-ut.webp">
+                </div>
+                <div class="habilidade">
+                    <h4>Torreta Automática</h4>
+                    <p>Posicione até duas torretas que herdam todos os seus itens</p>
+                    <img src="assets/img/icones-habilidade/enge-esp.webp">
+                </div>
             </div>
         </section>
     </main>
