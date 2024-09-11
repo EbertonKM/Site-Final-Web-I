@@ -467,6 +467,82 @@ footer {
     }
 }
 
+/*---ESTILIZAÇÃO PAGINA DE SUPORTE---*/
+
+/*Div container de tudo dentro do main da página*/
+.suporte-form-container {
+    width: 100%;
+    margin: 5% 0;
+    text-align: center;
+}
+
+/*Título "Contatar Suporte"*/
+.suporte-form-container h3 {
+    margin: 0.5rem 0;
+}
+
+/*<from>*/
+.formulario {
+    margin: 1rem 15rem;
+}
+
+/*Div do <button> e <a>*/
+.botoes {
+    display: flex;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: start;
+    padding: 0 0.5rem;
+}
+
+/*Botão enviar*/
+.botoes button {
+    width: 20%;
+    height: 100%;
+    border-radius: 0.5rem;
+    border: 1px solid darkgray;
+    transition: background-color 0.2s ease;
+}
+
+/*Link para voltar*/
+.botoes a {
+    width: 20%;
+    border-radius: 0.5rem;
+    background-color: white;
+    border: 1px solid darkgray;
+    padding: 0.4rem 1.2rem;
+    margin-left: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+/*Efeitos de hover dos links*/
+.botoes button:hover, .botoes a:hover {
+    background-color: darkgrey;
+    transition: background-color 0.2s ease;
+}
+
+@media screen and (max-width:768px){
+    /*Muda a disposição dos botões em telas pequenas*/
+    .botoes {
+        justify-content: space-between;
+    }
+
+    /*Melhora o posicionamento vertical do form em telas menores*/
+    .suporte-form-container {
+        margin: 20% 0;
+    }
+
+    /*Remove as margens em telas menores*/
+    .formulario {
+        margin: 1rem 1rem;
+    }
+
+    /*Ajusta a largura dos "botoes em telas menores"*/
+    .botoes button, .botoes a {
+        width: 45%;
+    }
+}
+
 /*---ESTILIZAÇÃO SOBRE NÓS---*/
 
 /*Section Container de tudo*/
