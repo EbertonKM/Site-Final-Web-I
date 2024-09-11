@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
 
-html {
-    font-size: 62, 5%;
-}
-
 /*CSS reset*/
 * {
     margin: 0;
@@ -51,7 +47,7 @@ section,
 #caca,
 #coma,
 #enge {
-    scroll-margin: 1rem;
+    scroll-margin: 6.5rem;
 }
 
 /*Formatação de todos os títulos de seção*/
@@ -69,14 +65,8 @@ section,
     height: 100%;
     width: 100%;
     object-fit: cover;
-}
-
-/*---HOME BUTTOM---*/
-.home {
-    z-index: 1;
-    position: fixed;
-    bottom: 0.3rem;
-    right: 0.3rem;
+    top: 0;
+    left: 0;
 }
 
 /*Eleva um pouco o botão em telas pequenas*/
@@ -91,6 +81,18 @@ section,
 }
 
 /*---ESTILIZAÇÕES DO HEADER---*/
+
+/*Torna o header fixo*/
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+header img {
+    border-radius: 1rem;
+}
 
 /*Ajustar a distância entre cada opção do header*/
 .nav-item {
@@ -137,7 +139,7 @@ section,
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 1rem;
+    margin-top: 6.5rem;
     padding-bottom: 1.5rem;
 }
 
@@ -462,5 +464,63 @@ footer {
     .footer-opcoes a {
         font-size: 1.2rem;
         padding: 0.4rem 1rem;
+    }
+}
+
+/*---ESTILIZAÇÃO SOBRE NÓS---*/
+
+/*Section Container de tudo*/
+.sobre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10% 0;
+    padding: 1rem 0;
+}
+
+/*Títulos das informações*/
+.sobre h2 {
+    margin-top: 0.6rem;
+}
+
+/*Textos das informações*/
+.sobre p{
+    width: 70%;
+}
+
+/*Link do instagram*/
+.sobre a {
+    width: 10%;
+    margin-top: 0.2rem;
+}
+
+/*Icone do instagram dentro do Link do instagram*/
+.sobre img {
+    width: 100%;
+    border-radius: 1rem;
+    padding: 0.2rem 0.4rem;
+    background-color: lightslategrey;
+    transition: background-color 0.3s ease;
+    transition: transform 0.2s ease;
+}
+
+/*Efeitos de hover especiais além do hover-scale como icone do instagram*/
+.sobre img:hover {
+    background-color: lightsteelblue;
+    transition: background-color 0.3s ease;
+    transition: transform 0.2s ease;
+}
+
+/*Botão de voltar ao index.html*/
+.voltar {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+}
+
+/*Ajusta o tamanho do botão do instagram em telas menores*/
+@media screen and (max-width:768px) {
+    .sobre .instagram {
+        width: 35%;
     }
 }
