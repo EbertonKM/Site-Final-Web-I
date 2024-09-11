@@ -100,20 +100,28 @@ section,
 }
 
 /*Animação de hover scale. Apenas aplicado em telas grandes*/
-@media screen and (min-width:992px) {
+@media screen and (min-width:991px) {
     .hover-scale:hover {
         transform: scale(1.2);
         transition: transform 0.2s ease;
     }
+
+    .hover-scale {
+        transition: transform 0.2s ease;
+    }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:992px) {
 
     /*Animação de hover scale. Apenas aplicado em pequenas*/
     .hover-scale:hover {
         transform: scale(1.07);
         transition: transform 0.2s ease;
         background: white;
+    }
+    
+    .hover-scale {
+        transition: transform 0.2s ease;
     }
 
     /*Joga o icone no centro de telas mobile*/
@@ -239,7 +247,7 @@ section,
 .container-seletor {
     display: inline-block;
     text-align: center;
-    width: calc(15% - 4px);
+    width: calc(16% - 4px);
 }
 
 /*Cada card de seleção de personagem*/
@@ -334,3 +342,77 @@ section,
 
 /*---ESTILIZAÇÃO DOS MAPAS---*/
 
+/*Container que separa os mapas em níveis*/
+.nivel-mapa {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    margin: 1rem 4rem;
+    padding: 1rem;
+}
+
+/*Título do nível do mapa*/
+.nivel-mapa h3 {
+    grid-column: 1 / -1;
+    padding: 0.2rem;
+}
+
+/*Container das informações do mapa*/
+.nivel-mapa .descricao {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0.2rem;
+}
+
+/*Nome do mapa*/
+.nivel-mapa h4 {
+    width: 100%;
+}
+
+/*Descrição do mapa*/
+.nivel-mapa p {
+    width: 100%;
+    padding: 0 0.2rem;
+}
+
+/*Imagem do mapa*/
+.nivel-mapa img {
+    width: 50%;
+    border: 1px solid lightsteelblue;
+}
+
+/*Linha horizontal - Usada apenas em telas pequenas*/
+.nivel-mapa hr {
+    display: none;
+}
+
+/*Remove as margens laterais em telas médias*/
+@media screen and (max-width:992px) {
+    .nivel-mapa {
+        width: 100%;
+        margin: 1rem 0;
+    }
+}
+
+@media screen and (max-width:768px) {
+    /*Reduz o grid a apenas 1 coluna*/
+    .nivel-mapa {
+        margin: 1rem 0;
+        grid-template-columns: 1fr;
+    }
+
+    /*Centraliza a imagem em telas pequenas*/
+    .nivel-mapa img {
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+        border-radius: 0.5rem;
+    }
+
+    /*Mostra a barra horizontal em telas pequenas*/
+    .nivel-mapa hr {
+        display: block;
+    }
+}
