@@ -146,6 +146,7 @@ header img {
 /*Container das tags*/
 .tag-container {
     display: flex;
+    max-width: 100%;
 }
 
 /*Cada uma das três tags*/
