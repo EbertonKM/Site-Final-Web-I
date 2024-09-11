@@ -416,3 +416,51 @@ section,
         display: block;
     }
 }
+
+/*---ESTILIZAÇÃO DO FOOTER---*/
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+}
+
+/*Logo do footer*/
+.footer-logo {
+    width: 50%;
+    display: block;
+    margin: auto auto;
+}
+
+/*Texto de copyright*/
+.footer-texto {
+    display: block;
+    margin: auto auto;
+}
+
+/*nav de opções do footer*/
+.footer-opcoes {
+    display: flex;
+    margin: auto auto;
+    text-align: center;
+}
+
+/*Cada link de opção do footer*/
+.footer-opcoes a{
+    padding: 0.2rem 0.5rem;
+    margin: 0.1rem 0.5rem;
+}
+
+@media screen and (max-width:768px) {
+    /*Reduz o footer de 3 colunas para 1 em telas pequenas*/
+    footer {
+        grid-template-columns: 1fr;
+        gap: 0.5rem 0;
+        padding-bottom: 0.5rem;
+    }
+
+    /*Aumenta a área de click para telas menores*/
+    .footer-opcoes a {
+        font-size: 1.2rem;
+        padding: 0.4rem 1rem;
+    }
+}
