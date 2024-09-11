@@ -69,38 +69,6 @@ section,
     left: 0;
 }
 
-/*Eleva um pouco o botão em telas pequenas*/
-@media screen and (max-width:768px) {
-    .home {
-        bottom: 45%;
-    }
-}
-
-.home span {
-    color: white;
-}
-
-/*---ESTILIZAÇÕES DO HEADER---*/
-
-/*Torna o header fixo*/
-header {
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    width: 100%;
-}
-
-header img {
-    border-radius: 1rem;
-}
-
-/*Ajustar a distância entre cada opção do header*/
-.nav-item {
-    margin-left: 15px;
-    padding: 0.2rem 0.5rem;
-    font-size: 1.2rem;
-}
-
 /*Animação de hover scale. Apenas aplicado em telas grandes*/
 @media screen and (min-width:991px) {
     .hover-scale:hover {
@@ -125,10 +93,34 @@ header img {
     .hover-scale {
         transition: transform 0.2s ease;
     }
+}
 
+/*---ESTILIZAÇÕES DO HEADER---*/
+
+/*Torna o header fixo*/
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+header img {
+    border-radius: 1rem;
+}
+
+/*Ajustar a distância entre cada opção do header*/
+.nav-item {
+    margin-left: 15px;
+    padding: 0.2rem 0.5rem;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width:992px){
     /*Joga o icone no centro de telas mobile*/
     .navbar-brand {
-        margin-left: 30%;
+        display: block;
+        margin: 0 auto;
     }
 }
 
